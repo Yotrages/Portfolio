@@ -1,0 +1,452 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My portfolio</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> 
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NCV8QTZQ');</script>
+  <!-- End Google Tag Manager -->
+    
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class='navbar-brand' href='/'><i class='uil uil-user'></i> <span class="name">Qayyum Oladimeji</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAV ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey folks, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Qayyum Oladimeji</span>
+                                    <!-- <span class="animated-item">Web Designer</span> -->
+                                    <span class="animated-item">Full Stack Developer</span>
+                                    <span class="animated-item">Front End Developer</span>
+                                </div>
+                        </h1>
+
+                        <p>Building a successful Website is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <a href="#" class="btn mr-lg-2 custom-btn"> Welcome</a>
+                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/undraw/og1.png" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container project-section">
+      <div class="row">
+          <div class="col-12">
+              <h2 class="text-center">My Projects</h2>
+              <div class="iframe-container">
+                  <iframe id="project-iframe" src="https://awesomestart.netlify.app" scrolling="yes"></iframe>
+              </div>
+              <div class="navigation-buttons">
+                  <button id="prev-btn" class="btn btn-warning text-white">Previous</button>
+                  <button id="next-btn" class="btn btn-warning text-white">Next</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      const websites = ["https://awesomestart.netlify.app", "https://delicacyfood.netlify.app", "https://qayyumportfolio.netlify.app"];
+      let currentIndex = 0;
+
+      document.getElementById('prev-btn').addEventListener('click', function() {
+          currentIndex = (currentIndex > 0) ? currentIndex - 1 : websites.length - 1;
+          document.getElementById('project-iframe').src = websites[currentIndex];
+      });
+
+      document.getElementById('next-btn').addEventListener('click', function() {
+          currentIndex = (currentIndex < websites.length - 1) ? currentIndex + 1 : 0;
+          document.getElementById('project-iframe').src = websites[currentIndex];
+      });
+  </script>
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class=" mb-4 about" >
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title text-center mb-4">
+          <h2>About</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="images/undraw/2nd.jpg" class="img-fluid my-pic" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>Full Stack Developer.</h3>
+            <p class="fst-italic">
+              I'm an 18 year old Nigeria website developer. My aim is to build responsive websites and satisfy my clients' needs.
+            </p>
+            <div class="row">
+              <div class="col-lg-6 list">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>28 May 2006</span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.Awesome.com</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span><a href="tel: +234-906-270-2884">+234 906 270 2884</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Ibadan, Oyo State</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 list">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:qayyumoladimeji@gmail.com">qayyumoladimeji@gmail.com</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- <div class="h-fit MuiBox-root css-3y7qk2">
+      <div class="MuiStack-root css-dvxtzn">
+        <p class="MuiTypography-root MuiTypography-body1 css-9l3uo3">Latest project</p>
+        <img alt="line" loading="lazy" width="68" height="248" decoding="async" data-nimg="1" style="color:transparent" src="Isaac%20Profile_files/line1.svg">
+        <div class="MuiStack-root css-11zwjsf"><a target="_blank" href="https://bcahealthcarenetwork.com/">Visit</a></div><iframe title="Example Iframe" src="https://bcahealthcarenetwork.com/" width="953" height="400" frameborder="0" allowfullscreen="" style="overflow:hidden"></iframe><img alt="line" loading="lazy" width="68" height="248" decoding="async" data-nimg="1" style="color:transparent" src="Isaac%20Profile_files/line2.svg"><div class="MuiStack-root css-11zwjsf"><a target="_blank" href="https://ubefu.vercel.app/">Visit</a></div><iframe title="Example Iframe" src="Isaac%20Profile_files/a_002.htm" width="953" height="400" frameborder="0" allowfullscreen="" style="overflow:hidden"></iframe> -->
+
+     <!-- ======= Skills Section ======= -->
+     <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title text-center mb-4">
+          <h2>Skills</h2>
+          <h3></h3>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">99%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">99%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">98%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+             <div class="progress">
+              <span class="skill">Node js<i class="val">Soon</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress<i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">React js<i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+    
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Experiences</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2024</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Full Stack Developer</span></h3>
+                                  <p>Innovative and deadline-driven Web Developer with 3+ years of experience developing client and user-centered websites.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Front End Developer</span></h3>
+                                <p>Specialized in creating engaging and responsive user interfaces using the latest web technologies. Adept at transforming complex requirements into intuitive and visually appealing designs.</p>
+                              </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2024</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Back End Developer</h3>
+                                <p>Expert in server-side development, database management, and API integration. Experienced in building robust and scalable server applications that drive business efficiency and performance.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2014</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span></h3>
+                                <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum eget magna consequat viverra.</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2011</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Primary School</span><small>Private School</small></h3>
+                                  <p>I attended Aiserc Model College from 2011 to 2016.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2017</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Secondary School</span><small>Public School</small></h3>
+                                <p>I attended Bioku Grammar School for my secondary education from 2016 and graduated in 2023 after passing my O'level exams.
+                              </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>University</span><small>Degree</small></h3>
+                                <p>Currently enrolled in university.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.644444444445!2d3.9070154!3d7.3735417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039926348f5d795%3A0xb69ae0f9be53c0d1!2sBishop%20Oyebode%20Memorial%20Anglican%20Church!5e0!3m2!1sen!2sng!4v1643723455555!5m2!1sen!2sng" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0"><a href="tel no:+234-902-928-2035">+234-902-928-2035</a></p>
+                  <p><a href="mailto:qayyumoladimeji@gmail.com">qayyumoladimeji@gmail.com</a></p>
+                </div>
+
+                <ul class="social-links">
+                     <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li>
+                     <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                     <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="/send" method="POST">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" id="name" required>
+                    </div>
+            
+                    <div class="col-lg-6 col-12">
+                        <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
+                    </div>
+            
+                    <div class="col-12">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" id="subject" required>
+                    </div>
+            
+                    <div class="col-12">
+                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
+                    </div>
+            
+                    <div class="m-auto col-lg-5 col-12">
+                        <input type="submit" class="form-control submit-btn" value="Send Button" id="send-button">
+                    </div>
+                </div>
+            </form>
+            
+            </div>
+          </div>
+          <!-- <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
+            <h2 class="mb-4">Interested to work together? Let's talk</h2>
+            <a href="https://wa.me/+2349062702884" class="btn-lg submit-btn mx-auto mt-4" target="_blank">
+              Message Us
+            </a>
+  
+            </div> 
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Qayyum Oladimeji</h3>
+      <div class="social-links">
+        <a href="https://x.com/Hardeybare28" class="twitter" data-placement="right" title="chat me on X"><i class="bx bxl-twitter"></i></a>
+        <a href="https://web.facebook.com/qayyum.ogunleti.3" class="facebook" data-placement="right" title="chat me on Facebook"><i class="bx bxl-facebook"></i></a>
+        <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+        <a href="https://www.linkedin.com/in/qayyum-oladimeji-552431300/" class="linkedin" data-placement="right" title="chat me on linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+       2024 &copy; Copyright <strong><span>qayyumoladimeji</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCV8QTZQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/Server.js"></script>
+  </body>
+</html>
